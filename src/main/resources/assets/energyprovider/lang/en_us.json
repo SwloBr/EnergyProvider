@@ -1,3 +1,5 @@
 {
-  "block.energyprovider.cable": "Cable"
+  "block.energyprovider.cable": "Cable",
+
+  "creativetab.energy_provider_tab": "Energy Provider"
 }
