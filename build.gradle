@@ -48,6 +48,10 @@ neoForge {
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+
+            // Disable narrator to avoid flite library issues on Linux
+            systemProperty 'narrator', 'off'
+            systemProperty 'java.awt.headless', 'true'
         }
 
         server {
