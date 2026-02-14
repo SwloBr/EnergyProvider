@@ -20,9 +20,10 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> ENERGY_PROVIDER_TAB = CREATIVE_MODE_TAB.register("energy_provider_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CABLE_BLOCK.asItem()))
                     .title(Component.translatable("creativetab.energy_provider_tab"))
-                    .displayItems( ((itemDisplayParameters, output) ->
-                        output.accept(ModBlocks.CABLE_BLOCK)
-                    ))
+                    .displayItems( ((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.CABLE_BLOCK);
+                        output.accept(ModItems.WRENCH);
+                    }))
                     .build()
             );
 
